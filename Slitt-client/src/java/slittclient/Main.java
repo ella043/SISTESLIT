@@ -72,8 +72,8 @@ public class Main {
                 
     }
     
-    public String addUser(String firstname, String lastname, int telephone, String mail){
-        return UserRemote.AddUser(firstname, lastname, telephone, mail);
+    public String addUser(String firstname, String lastname, int telephone, String mail, String username, String password){
+        return UserRemote.AddUser(firstname, lastname, telephone, mail, username, password);
         
       
     }

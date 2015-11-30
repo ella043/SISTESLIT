@@ -23,12 +23,14 @@ public class UserBean implements UserBeanRemote {
     EntityManager em;
 
     @Override
-    public String AddUser(String FirstName, String LastName, int TlfNr, String Email) {
+    public String AddUser(String FirstName, String LastName, int TlfNr, String Email, String Username, String Password) {
         Bruker u = new Bruker();
         u.setFirstName(FirstName);
         u.setLastName(LastName);
         u.setTlfNr(TlfNr);
         u.setEmail(Email);
+        u.setUserName(Username);
+        u.setPassword(Password);
         em.persist(u);
         return u.getFirstName();
 
@@ -54,9 +56,9 @@ public class UserBean implements UserBeanRemote {
     
     public boolean loggInn(String username, String password) {
         List<Bruker> brukerListe = em.createQuery(
-        "SELECT b FROM Bruker b WHERE b.FirstName LIKE :firstName AND b.LastName LIKE :lastName" )
-        .setParameter("firstName", username)
-        .setParameter("lastName", password)       
+        "SELECT b FROM Bruker b WHERE b.UserName LIKE :userName AND b.Password LIKE :passWord" )
+        .setParameter("userName", username)
+        .setParameter("passWord", password)       
         .setMaxResults(1)
         .getResultList();
         System.out.println("logg inn" + username);
