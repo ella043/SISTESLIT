@@ -42,18 +42,38 @@ public class MinProfil extends javax.swing.JFrame {
         Fremgang.setFont(new java.awt.Font("Arial", 0, 35)); // NOI18N
         Fremgang.setForeground(new java.awt.Color(255, 255, 255));
         Fremgang.setText("Fremgang");
+        Fremgang.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FremgangMouseClicked(evt);
+            }
+        });
 
         Innlevering.setFont(new java.awt.Font("Arial", 0, 35)); // NOI18N
         Innlevering.setForeground(new java.awt.Color(255, 255, 255));
         Innlevering.setText("Innlevering");
+        Innlevering.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InnleveringMouseClicked(evt);
+            }
+        });
 
         Modul.setFont(new java.awt.Font("Arial", 0, 72)); // NOI18N
         Modul.setForeground(new java.awt.Color(255, 255, 255));
         Modul.setText("Modul");
+        Modul.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModulMouseClicked(evt);
+            }
+        });
 
         Kalender.setFont(new java.awt.Font("Arial", 0, 35)); // NOI18N
         Kalender.setForeground(new java.awt.Color(255, 255, 255));
         Kalender.setText("Kalender");
+        Kalender.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                KalenderMouseClicked(evt);
+            }
+        });
 
         Tilbakemelding.setFont(new java.awt.Font("Arial", 0, 35)); // NOI18N
         Tilbakemelding.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,12 +83,6 @@ public class MinProfil extends javax.swing.JFrame {
                 TilbakemeldingMouseClicked(evt);
             }
         });
-
-        jLayeredPane1.setLayer(Fremgang, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(Innlevering, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(Modul, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(Kalender, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(Tilbakemelding, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -119,10 +133,13 @@ public class MinProfil extends javax.swing.JFrame {
                     .addComponent(Innlevering, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(344, Short.MAX_VALUE)))
         );
+        jLayeredPane1.setLayer(Fremgang, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Innlevering, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Modul, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Kalender, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Tilbakemelding, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Bakgrunn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Min profil.png"))); // NOI18N
-
-        jLayeredPane2.setLayer(Bakgrunn, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -142,6 +159,7 @@ public class MinProfil extends javax.swing.JFrame {
                     .addComponent(Bakgrunn, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
+        jLayeredPane2.setLayer(Bakgrunn, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -184,6 +202,34 @@ public class MinProfil extends javax.swing.JFrame {
    tbm.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_TilbakemeldingMouseClicked
+
+    private void FremgangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FremgangMouseClicked
+        Framgang fgang=new Framgang();
+        MinProfil.this.setVisible(false);
+        fgang.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FremgangMouseClicked
+
+    private void InnleveringMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InnleveringMouseClicked
+            Innlevering delivery=new Innlevering();
+            MinProfil.this.setVisible(false);
+            delivery.setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_InnleveringMouseClicked
+
+    private void ModulMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModulMouseClicked
+        Modul modul=new Modul();
+            MinProfil.this.setVisible(false);
+            modul.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModulMouseClicked
+
+    private void KalenderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KalenderMouseClicked
+        Kalender dato=new Kalender();
+            MinProfil.this.setVisible(false);
+            dato.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_KalenderMouseClicked
 
     /**
      * @param args the command line arguments
