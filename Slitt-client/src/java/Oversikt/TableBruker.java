@@ -20,23 +20,22 @@ public class TableBruker extends JPanel {
     public TableBruker() {
         super(new GridLayout(1,0));
 
-        String[] columnNames = {"First Name",
-                                "Last Name",
-                                "Sport",
-                                "# of Years",
-                                "Vegetarian"};
+        String[] columnNames = {"FirstName",
+                                "LastName",
+                                "Modul",
+                                };
 
         Object[][] data = {
-	    {"Kathy", "Smith",
-	     "Snowboarding", new Integer(5), new Boolean(false)},
-	    {"John", "Doe",
-	     "Rowing", new Integer(3), new Boolean(true)},
-	    {"Sue", "Black",
-	     "Knitting", new Integer(2), new Boolean(false)},
-	    {"Jane", "White",
-	     "Speed reading", new Integer(20), new Boolean(true)},
-	    {"Joe", "Brown",
-	     "Pool", new Integer(10), new Boolean(false)}
+	    {"Kenneth", "Rønning",
+                new Integer(1)},
+	     {"Elaine", "Sajets",
+                new Integer(2)},
+	     {"Velte", "Horpestad",
+                new Integer(3)},
+	     {"Maria", "Andersen",
+                new Integer(4)},
+	     {"Fredrik", "Hansen",
+                new Integer(5)}
         };
 
         final JTable table = new JTable(data, columnNames);
