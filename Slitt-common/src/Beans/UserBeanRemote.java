@@ -14,7 +14,7 @@ import javax.ejb.Remote;
 @Remote
 public interface UserBeanRemote {
 
-    public String AddUser(String FirstName, String LastName, int TlfNr, String Email);
+    public String AddUser(String FirstName, String LastName, int TlfNr, String Email, String Username, String Password);
 
     public void delete(String firstname);
 
