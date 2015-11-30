@@ -12,9 +12,6 @@ import javax.ejb.Remote;
  * @author Kenneth
  */
 @Remote
-public interface FremgangBeanRemote {
-
-    public String Fremgang(String Status, String Oversikt, String Logg);
-
+public interface UploadBeanRemote {
     
 }

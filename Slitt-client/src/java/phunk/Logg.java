@@ -68,6 +68,11 @@ public class Logg extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea3);
 
         lagreLogg.setText("Lagre");
+        lagreLogg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lagreLoggActionPerformed(evt);
+            }
+        });
 
         backToFram.setText("jLabel5");
         backToFram.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -164,6 +169,10 @@ public class Logg extends javax.swing.JFrame {
    fgang.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_backToFramMouseClicked
+
+    private void lagreLoggActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagreLoggActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lagreLoggActionPerformed
 
     /**
      * @param args the command line arguments

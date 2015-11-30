@@ -6,6 +6,7 @@
 package Beans;
 
 import Enteties.Fremgang;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -32,8 +33,9 @@ public class FremgangBean implements FremgangBeanRemote {
         
         
     }
-    
-
+  
+    }
+            
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
-}
+
