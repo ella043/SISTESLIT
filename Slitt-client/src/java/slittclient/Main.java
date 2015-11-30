@@ -63,13 +63,9 @@ public class Main {
         Innlogging i = new Innlogging();
         i.setVisible(true);
         
-        
-        
-    
-        
-        
                 
-                
+      
+        
     }
     
     public String addUser(String firstname, String lastname, int telephone, String mail){
