@@ -5,6 +5,17 @@
  */
 package phunk;
 
+import java.awt.Component;
+import java.awt.HeadlessException;
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Fredrik
@@ -14,6 +25,9 @@ public class Logg extends javax.swing.JFrame {
     /**
      * Creates new form Logg
      */
+    
+    Connection conn;
+            
     public Logg() {
         initComponents();
     }
@@ -171,7 +185,22 @@ public class Logg extends javax.swing.JFrame {
     }//GEN-LAST:event_backToFramMouseClicked
 
     private void lagreLoggActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagreLoggActionPerformed
-        // TODO add your handling code here:
+         try{
+            PreparedStatement pst = null;
+            
+            String sql ="INSERT INTO logglogg(gjort, laert, problemer) values (?, ?, ?)";
+            pst=conn.prepareStatement(sql);
+            pst.setString(1, jTextArea1.getText());
+            pst.setString(2, jTextArea2.getText());
+            pst.setString(3, jTextArea3.getText());
+            pst.execute();
+
+            JOptionPane.showMessageDialog(null, "Logg lagret!");
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+
+        }          
     }//GEN-LAST:event_lagreLoggActionPerformed
 
     /**
