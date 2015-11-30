@@ -208,7 +208,7 @@ public class Innlevering extends javax.swing.JFrame {
           System.out.println("problem accessing file"+file.getAbsolutePath());
         }
     } else {
-        System.out.println("File access cancelled by user.");
+        System.out.println("File has been cancelled by user");
     
 } 
         // TODO add your handling code here:
