@@ -30,7 +30,6 @@ public class Modul3 extends javax.swing.JFrame {
         jLayeredPane2 = new javax.swing.JLayeredPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,11 +40,13 @@ public class Modul3 extends javax.swing.JFrame {
         jTextArea1.setText("Læringsmål:\n\nDu har fullført modulen når du:\n    kan forklare hva som menes med abstraksjon og modularisering\n    kan bruke debuggeren i BlueJ\n    har lært litt mer java, og kan:\n        forklare forskjellen på primitive typer og objekttyper\n        kan skrive kode som lager nye objekter\n        kan skrive kode som kaller metoder i samme objekt, og i andre objekter\n    kan tegne klassediagrammer og objektdiagrammer\n\nRessurser:\nLæreboka: \tChap. 3\nProsjekter: \tclock-display, mail-system\n\n \n\nI tillegg kan du se på følgende ressurser:\n    Interaksjon med objekter.pot \tPPT om hvordan bruke flere typer ojekter\n    KlokkePPT.mp4 \t\tKlokkeeksempel, PPT gjennomgang\n    klokke_clockdisplay.mp4 \tKlokkeeksempel, kodegjennomgang\n    klokke_numberdisplay.mp4 \tKlokke, gjennomgang av NumberDisplay\n    debugvindu.mp4 \t\tHvordan vi bruker Debugger\n    stepping.mp4 \t\tBruke Debugger for å kontrollere programmet\n    variable.mp4 \t\tDebugger for å se på verdier i variable\n    abstraksjon_modularisering.mp4 \tAbstrakjon og modularisering.\n\n \nGodkjenning:\nSkriv en oppsumering om det du har lært så langt på bloggen din. Du skal og lage en video der du går gjennom ett eksempel du har skrevet selv.\n I dette eksempelet skal du bruke PMD og Checkstyle. PMD og Checkstyle skal ikke rapportere feil eller mangler.  \nLink til video skal inn på bloggen. Du skal og laste opp prosjektet i innleveringsmappa for modulen i Fronter.\n\nGodkjennes av medstudent, foreleser eller hjelpelærer.");
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Modul 3.png"))); // NOI18N
+
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
         jLayeredPane2Layout.setHorizontalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1600, Short.MAX_VALUE)
+            .addComponent(jLabel1)
             .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
                     .addContainerGap(56, Short.MAX_VALUE)
@@ -54,44 +55,27 @@ public class Modul3 extends javax.swing.JFrame {
         );
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addComponent(jLabel1)
             .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
-                    .addContainerGap(272, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(41, Short.MAX_VALUE)))
+                    .addContainerGap(195, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(49, Short.MAX_VALUE)))
         );
         jLayeredPane2.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Modul 3.png"))); // NOI18N
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLayeredPane2))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLayeredPane2))
+            .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -134,7 +118,6 @@ public class Modul3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
