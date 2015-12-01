@@ -13,22 +13,8 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface LoggBeanRemote {
-
-    /**
-     *
-     * @param gjort
-     * @param laert
-     * @param problemer
-     * @return
-     */
+    
     public String addLogg(String gjort, String laert, String problemer);
-
-    /**
-     *
-     * @param gjort
-     * @param laert
-     * @param problemer
-     */
     public boolean saveLogg(String gjort, String laert, String problemer);
     
 }
