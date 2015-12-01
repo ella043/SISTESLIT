@@ -33,12 +33,16 @@ import javax.swing.JFileChooser;
 /*    @SuppressWarnings("unchecked")
 =======
     @SuppressWarnings("unchecked")
+<<<<<<< HEAD:Slitt-client/src/java/phunk/InnleveringFREAK.java
 <<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
 =======
 >>>>>>> 6de544de799c3e763a79798edc3e8d05fa521c64:Slitt-client/src/java/phunk/Innlevering.java
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
 >>>>>>> 59603af2dbef982a361945f4c8e99268c28a196e
+=======
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+>>>>>>> 6fef41375bf75685749139d7964ffec81534263e:Slitt-client/src/java/phunk/Innlevering.java
     private void initComponents() {
 
         fileChooser = new javax.swing.JFileChooser();
@@ -113,24 +117,6 @@ import javax.swing.JFileChooser;
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(64, 64, 64)
                                 .addComponent(jButton1))
-<<<<<<< HEAD
-                            .addComponent(jLabel4)
-                            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                        .addGap(67, 67, 67)
-                                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(VelgFil)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))
-                                .addGap(38, 38, 38)
-                                .addComponent(textarea, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(375, Short.MAX_VALUE))
-=======
                             .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jLayeredPane2Layout.createSequentialGroup()
                                     .addGap(67, 67, 67)
@@ -149,7 +135,6 @@ import javax.swing.JFileChooser;
                     .addGap(841, 841, 841)
                     .addComponent(textarea, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(373, Short.MAX_VALUE)))
->>>>>>> 59603af2dbef982a361945f4c8e99268c28a196e
         );
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,13 +146,6 @@ import javax.swing.JFileChooser;
                     .addComponent(jLabel2)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-<<<<<<< HEAD
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(VelgFil))
-                    .addComponent(textarea, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-=======
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(VelgFil))
@@ -218,6 +196,7 @@ import javax.swing.JFileChooser;
         );
 
         pack();
+<<<<<<< HEAD:Slitt-client/src/java/phunk/InnleveringFREAK.java
     }// </editor-fold>                        
 
     private void VelgFilActionPerformed(java.awt.event.ActionEvent evt) {                                        
@@ -490,6 +469,8 @@ import javax.swing.JFileChooser;
         );
 
         pack();
+=======
+>>>>>>> 6fef41375bf75685749139d7964ffec81534263e:Slitt-client/src/java/phunk/Innlevering.java
     }// </editor-fold>//GEN-END:initComponents
 
     private void VelgFilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VelgFilActionPerformed
@@ -540,4 +521,8 @@ import javax.swing.JFileChooser;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea textarea;
     // End of variables declaration//GEN-END:variables
+<<<<<<< HEAD:Slitt-client/src/java/phunk/InnleveringFREAK.java
 */
+=======
+}
+>>>>>>> 6fef41375bf75685749139d7964ffec81534263e:Slitt-client/src/java/phunk/Innlevering.java
