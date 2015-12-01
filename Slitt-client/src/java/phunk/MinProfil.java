@@ -211,7 +211,7 @@ public class MinProfil extends javax.swing.JFrame {
     }//GEN-LAST:event_FremgangMouseClicked
 
     private void InnleveringMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InnleveringMouseClicked
-            Innlevering delivery=new Innlevering();
+            InnleveringFREAK delivery=new InnleveringFREAK();
             MinProfil.this.setVisible(false);
             delivery.setVisible(true);
 // TODO add your handling code here:
