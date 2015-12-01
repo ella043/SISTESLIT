@@ -11,6 +11,7 @@ import Beans.KalenderBeanRemote;
 import Beans.ModulBeanRemote;
 import Beans.TilbakemeldingBeanRemote;
 import Beans.UserBeanRemote;
+import Beans.LoggBeanRemote;
 import javax.ejb.EJB;
 import phunk.Innlogging;
 import phunk.Tilbakemelding2;
@@ -30,6 +31,8 @@ public class Main {
     private static ModulBeanRemote ModulRemote;
     @EJB(name = "FremgangBean")
     private static FremgangBeanRemote FremgangRemote;
+    @EJB(name ="LoggBean")
+    private static LoggBeanRemote LoggRemote; 
 
     /**
      * @param args the command line arguments
@@ -80,6 +83,11 @@ public class Main {
       
     }
     
+    public String addLogg(String gjort, String laert, String problemer){
+        return LoggRemote.addLogg(gjort, laert, problemer);
+      
+    }
+    
     
     public static boolean loginUser(String username, String password){
         System.out.println(username + ", "  + password);
@@ -87,12 +95,21 @@ public class Main {
         System.out.println("result " + result);
         return result;
         
+<<<<<<< HEAD
     } 
     
     public static boolean Godkjenning(String godkjentIkkegodkjent){
         System.out.println(godkjentIkkegodkjent);
         boolean result = TilbakemeldingRemote.GodkjenningT(godkjentIkkegodkjent);
         System.out.println("Modulen er " + result);
+=======
+    }   
+    
+    public static boolean saveLogg(String gjort, String laert, String problemer){
+        System.out.println(gjort);
+        boolean result = LoggRemote.saveLogg(gjort, laert, problemer);
+        System.out.println("result " + result);
+>>>>>>> 0e681eed2f3616bbbfccb19eb02db380f2aa77a9
         return result;
     }
  
