@@ -28,11 +28,23 @@ public class Tilbakemelding implements Serializable {
     private String Kommentar;
     private String ModulTilbakemelding;
     private String SvarPaaSpm;
-    private Boolean Godkjenning;
+    private String Godkjenning;
 
     public Long getId() {
         return TilbakemeldingId;
     }
+
+    public String getGodkjenning() {
+        return Godkjenning;
+    }
+
+    public void setGodkjenning(String Godkjenning) {
+        this.Godkjenning = Godkjenning;
+    }
+
+
+
+    
 
     public String getKommentar() {
         return Kommentar;
@@ -56,14 +68,6 @@ public class Tilbakemelding implements Serializable {
 
     public void setSvarPaaSpm(String SvarPaaSpm) {
         this.SvarPaaSpm = SvarPaaSpm;
-    }
-
-    public Boolean getGodkjenning() {
-        return Godkjenning;
-    }
-
-    public void setGodkjenning(Boolean Godkjenning) {
-        this.Godkjenning = Godkjenning;
     }
 
     public void setId(Long id) {

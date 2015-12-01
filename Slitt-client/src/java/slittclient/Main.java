@@ -13,6 +13,7 @@ import Beans.TilbakemeldingBeanRemote;
 import Beans.UserBeanRemote;
 import javax.ejb.EJB;
 import phunk.Innlogging;
+import phunk.Tilbakemelding2;
 
 /**
  *
@@ -63,7 +64,8 @@ public class Main {
         Innlogging i = new Innlogging();
         i.setVisible(true);
         
-        
+        Tilbakemelding2 t = new Tilbakemelding2();
+        t.setVisible(true);
         
     
         
@@ -85,7 +87,14 @@ public class Main {
         System.out.println("result " + result);
         return result;
         
-    }   
+    } 
+    
+    public static boolean Godkjenning(String godkjentIkkegodkjent){
+        System.out.println(godkjentIkkegodkjent);
+        boolean result = TilbakemeldingRemote.GodkjenningT(godkjentIkkegodkjent);
+        System.out.println("Modulen er " + result);
+        return result;
+    }
  
 }
 
