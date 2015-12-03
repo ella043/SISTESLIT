@@ -35,7 +35,8 @@ public class Tilbakemelding extends javax.swing.JFrame {
         TilbakeM5 = new javax.swing.JLabel();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         Bakgrunn = new javax.swing.JLabel();
-        TilbakeM6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        backToP = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,6 +44,11 @@ public class Tilbakemelding extends javax.swing.JFrame {
         TilbakeM1.setForeground(new java.awt.Color(255, 255, 255));
         TilbakeM1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TilbakeM1.setText("1");
+        TilbakeM1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TilbakeM1MouseClicked(evt);
+            }
+        });
 
         TilbakeM2.setFont(new java.awt.Font("Arial", 0, 72)); // NOI18N
         TilbakeM2.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,33 +72,47 @@ public class Tilbakemelding extends javax.swing.JFrame {
 
         Bakgrunn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Tilbakemelding 1 og 2.png"))); // NOI18N
 
-        jLayeredPane2.setLayer(Bakgrunn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
         jLayeredPane2Layout.setHorizontalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1604, Short.MAX_VALUE))
             .addComponent(Bakgrunn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                 .addComponent(Bakgrunn)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(792, Short.MAX_VALUE))
         );
+        jLayeredPane2.setLayer(Bakgrunn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        TilbakeM6.setFont(new java.awt.Font("Arial", 0, 72)); // NOI18N
-        TilbakeM6.setForeground(new java.awt.Color(255, 255, 255));
-        TilbakeM6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TilbakeM6.setText("1");
-
-        jLayeredPane1.setLayer(TilbakeM1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(TilbakeM2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(TilbakeM3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(TilbakeM4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(TilbakeM5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLayeredPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(TilbakeM6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        backToP.setFont(new java.awt.Font("Arial", 0, 72)); // NOI18N
+        backToP.setForeground(new java.awt.Color(255, 255, 255));
+        backToP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        backToP.setText("1");
+        backToP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backToPMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -111,7 +131,7 @@ public class Tilbakemelding extends javax.swing.JFrame {
                         .addComponent(TilbakeM4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
                         .addComponent(TilbakeM5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(TilbakeM6, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backToP, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLayeredPane1Layout.createSequentialGroup()
@@ -126,7 +146,7 @@ public class Tilbakemelding extends javax.swing.JFrame {
                     .addComponent(TilbakeM1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TilbakeM3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(304, 304, 304)
-                .addComponent(TilbakeM6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backToP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -144,6 +164,13 @@ public class Tilbakemelding extends javax.swing.JFrame {
                     .addComponent(jLayeredPane2)
                     .addContainerGap()))
         );
+        jLayeredPane1.setLayer(TilbakeM1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(TilbakeM2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(TilbakeM3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(TilbakeM4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(TilbakeM5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLayeredPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(backToP, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -158,6 +185,20 @@ public class Tilbakemelding extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TilbakeM1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TilbakeM1MouseClicked
+        Tilbakemelding2 tbm2=new Tilbakemelding2();
+        Tilbakemelding.this.setVisible(false);
+        tbm2.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TilbakeM1MouseClicked
+
+    private void backToPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToPMouseClicked
+        MinProfil minP=new MinProfil();
+        Tilbakemelding.this.setVisible(false);
+        minP.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backToPMouseClicked
 
     /**
      * @param args the command line arguments
@@ -201,8 +242,9 @@ public class Tilbakemelding extends javax.swing.JFrame {
     private javax.swing.JLabel TilbakeM3;
     private javax.swing.JLabel TilbakeM4;
     private javax.swing.JLabel TilbakeM5;
-    private javax.swing.JLabel TilbakeM6;
+    private javax.swing.JLabel backToP;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

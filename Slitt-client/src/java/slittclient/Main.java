@@ -14,6 +14,7 @@ import Beans.UserBeanRemote;
 import Beans.LoggBeanRemote;
 import javax.ejb.EJB;
 import phunk.Innlogging;
+import phunk.Tilbakemelding2;
 
 /**
  *
@@ -66,7 +67,8 @@ public class Main {
         Innlogging i = new Innlogging();
         i.setVisible(true);
         
-        
+        Tilbakemelding2 t = new Tilbakemelding2();
+        t.setVisible(true);
         
     
         
@@ -93,12 +95,21 @@ public class Main {
         System.out.println("result " + result);
         return result;
         
+<<<<<<< HEAD
+    } 
+    
+    public static boolean Godkjenning(String godkjentIkkegodkjent){
+        System.out.println(godkjentIkkegodkjent);
+        boolean result = TilbakemeldingRemote.GodkjenningT(godkjentIkkegodkjent);
+        System.out.println("Modulen er " + result);
+=======
     }   
     
     public static boolean saveLogg(String done, String learnt, String problems){
         System.out.println(done);
         boolean result = LoggRemote.addLogg(done, learnt, problems);
         System.out.println("result " + result);
+>>>>>>> 0e681eed2f3616bbbfccb19eb02db380f2aa77a9
         return result;
     }
  
