@@ -81,6 +81,11 @@ public class Logg extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea3);
 
         lagreLogg.setText("Lagre");
+        lagreLogg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lagreLoggMouseClicked(evt);
+            }
+        });
         lagreLogg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lagreLoggActionPerformed(evt);
@@ -184,28 +189,17 @@ public class Logg extends javax.swing.JFrame {
     }//GEN-LAST:event_backToFramMouseClicked
 
     private void lagreLoggActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagreLoggActionPerformed
-         try{
-            Main main = new Main(); 
-            if (Main.saveLogg(jTextArea1.getText(), jTextArea2.getText(), jTextArea3.getText())){
-                PreparedStatement pst = null;
-            
-                String sql ="INSERT INTO logglogg(gjort, laert, problemer) values (?, ?, ?)";
-                pst=conn.prepareStatement(sql);
-                pst.setString(1, jTextArea1.getText());
-                pst.setString(2, jTextArea2.getText());
-                pst.setString(3, jTextArea3.getText());
-                pst.execute();
-
-                JOptionPane.showMessageDialog(logglayer, "Logg lagret!");  
+            if (Main.saveLogg(jTextArea1.getText(), jTextArea2.getText(), jTextArea3.getText())){ 
             }
-            
-        }
-        catch (EJBException | SQLException ex) {
-            JOptionPane.showMessageDialog(logglayer, ex);
-
-        }          
+                     
     }//GEN-LAST:event_lagreLoggActionPerformed
 
+    private void lagreLoggMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagreLoggMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(logglayer, "Logg lagret!"); 
+    }//GEN-LAST:event_lagreLoggMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
