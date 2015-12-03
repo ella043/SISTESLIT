@@ -21,32 +21,32 @@ public class Logglogg implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String gjort;
-    private String laert;
-    private String problemer;
+    private String done;
+    private String learnt;
+    private String problems;
 
-    public String getGjort() {
-        return gjort;
+    public String getDone() {
+        return done;
     }
 
-    public void setGjort(String gjort) {
-        this.gjort = gjort;
+    public String getProblems() {
+        return problems;
     }
 
-    public String getLaert() {
-        return laert;
+    public void setProblems(String problems) {
+        this.problems = problems;
     }
 
-    public void setLaert(String laert) {
-        this.laert = laert;
+    public void setDone(String done) {
+        this.done = done;
     }
 
-    public String getProblemer() {
-        return problemer;
+    public String getLearnt() {
+        return learnt;
     }
 
-    public void setProblemer(String problemer) {
-        this.problemer = problemer;
+    public void setLearnt(String learnt) {
+        this.learnt = learnt;
     }
    
 
@@ -82,5 +82,6 @@ public class Logglogg implements Serializable {
     public String toString() {
         return "Enteties.Logg[ id=" + id + " ]";
     }
+
     
 }

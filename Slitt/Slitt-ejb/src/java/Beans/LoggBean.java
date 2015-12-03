@@ -21,16 +21,16 @@ public class LoggBean implements LoggBeanRemote {
     EntityManager em;
 
     @Override
-    public String addLogg(String gjort, String laert, String problemer) {
+    public boolean addLogg(String done, String learnt, String problems) {
         Logglogg l = new Logglogg();
-        l.setGjort(gjort);
-        l.setLaert(laert);
-        l.setProblemer(problemer);
+        l.setDone(done);
+        l.setLearnt(learnt);
+        l.setProblems(problems);
         em.persist(l);
-        return l.getGjort(); 
+        return true; 
         }
     
-    @Override
+    /*@Override
     public boolean saveLogg(String gjort, String laert, String problemer) {
         @SuppressWarnings("JPQLValidation")
         List<Logglogg> loggListe;
@@ -46,5 +46,6 @@ public class LoggBean implements LoggBeanRemote {
             return false;
         }
         return true;
-    }
+    }*/
+
 } 

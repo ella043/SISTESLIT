@@ -14,7 +14,7 @@ import javax.ejb.Remote;
 @Remote
 public interface LoggBeanRemote {
     
-    public String addLogg(String gjort, String laert, String problemer);
-    public boolean saveLogg(String gjort, String laert, String problemer);
+    public boolean addLogg(String done, String learnt, String problems);
+    //public boolean saveLogg(String done, String laernt, String problems);
     
 }

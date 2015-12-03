@@ -81,8 +81,8 @@ public class Main {
       
     }
     
-    public String addLogg(String gjort, String laert, String problemer){
-        return LoggRemote.addLogg(gjort, laert, problemer);
+    public boolean addLogg(String done, String learnt, String problems){
+        return LoggRemote.addLogg(done, learnt, problems);
       
     }
     
@@ -95,9 +95,9 @@ public class Main {
         
     }   
     
-    public static boolean saveLogg(String gjort, String laert, String problemer){
-        System.out.println(gjort);
-        boolean result = LoggRemote.saveLogg(gjort, laert, problemer);
+    public static boolean saveLogg(String done, String learnt, String problems){
+        System.out.println(done);
+        boolean result = LoggRemote.addLogg(done, learnt, problems);
         System.out.println("result " + result);
         return result;
     }
