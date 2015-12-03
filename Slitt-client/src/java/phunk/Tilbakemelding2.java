@@ -143,7 +143,7 @@ public class Tilbakemelding2 extends javax.swing.JFrame {
 
     private void åpneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_åpneActionPerformed
    
-    if(Main.Godkjenning(åpne.getText())){
+    if(Main.Godkjenning(1)){
         JOptionPane.showMessageDialog(tilbakeside, "Modul er godkjent");
       
     }

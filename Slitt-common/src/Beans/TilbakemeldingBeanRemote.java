@@ -14,8 +14,8 @@ import javax.ejb.Remote;
 @Remote
 public interface TilbakemeldingBeanRemote {
 
-    public String Tilbakemelding(String Kommentar, String ModulTilbakemelding, String SvarPaaSpm, String Godkjenning);
+    public long Tilbakemelding(String Kommentar, String ModulTilbakemelding, String SvarPaaSpm, String Godkjenning);
 
-    public boolean GodkjenningT(String godkjentIkkegodkjent);
+    public boolean GodkjenningT(long id);
     
 }

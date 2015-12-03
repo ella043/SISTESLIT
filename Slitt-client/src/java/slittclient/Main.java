@@ -95,21 +95,20 @@ public class Main {
         System.out.println("result " + result);
         return result;
         
-<<<<<<< HEAD
+
     } 
     
-    public static boolean Godkjenning(String godkjentIkkegodkjent){
-        System.out.println(godkjentIkkegodkjent);
-        boolean result = TilbakemeldingRemote.GodkjenningT(godkjentIkkegodkjent);
-        System.out.println("Modulen er " + result);
-=======
-    }   
+    public static boolean Godkjenning(long id){
+        System.out.println(id);
+        boolean result = TilbakemeldingRemote.GodkjenningT(id);
+        System.out.println("Modulen er" + result);
+        return result;
+     }   
     
     public static boolean saveLogg(String gjort, String laert, String problemer){
         System.out.println(gjort);
         boolean result = LoggRemote.saveLogg(gjort, laert, problemer);
         System.out.println("result " + result);
->>>>>>> 0e681eed2f3616bbbfccb19eb02db380f2aa77a9
         return result;
     }
  

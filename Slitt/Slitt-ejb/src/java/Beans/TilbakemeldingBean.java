@@ -6,6 +6,7 @@
 package Beans;
 
 import Enteties.Tilbakemelding;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -22,29 +23,34 @@ public class TilbakemeldingBean implements TilbakemeldingBeanRemote {
     EntityManager em;
 
     @Override
-    public String Tilbakemelding(String Kommentar, String ModulTilbakemelding, String SvarPaaSpm, String Godkjenning) {
+    public long Tilbakemelding(String Kommentar, String ModulTilbakemelding, String SvarPaaSpm, String Godkjenning) {
        Tilbakemelding u = new Tilbakemelding();
        u.setKommentar(Kommentar);
        u.setModulTilbakemelding(ModulTilbakemelding);
        u.setSvarPaaSpm(SvarPaaSpm);
+       u.setGodkjenning(Godkjenning);
        em.persist(u);
-       return u.getModulTilbakemelding();
+       return u.getId();
     }
     
-    public boolean GodkjenningT(String godkjentIkkegodkjent) {
+    public boolean GodkjenningT(long id) {
+       // ArrayList<Tilbakemelding> liste = new ArrayList<Tilbakemelding>();
+        System.out.println("Skjekker ID" + id);
         List<Tilbakemelding> tilbakemeldingListe = em.createQuery(
-        "SELECT t FROM Tilbakemelding t WHERE t.Godkjenning LIKE :godkjenning" )
-        .setParameter("godkjenning", godkjentIkkegodkjent )   
+        "SELECT t FROM Tilbakemelding t WHERE t.TilbakemeldingId LIKE :id" )
+        .setParameter("id", id )   
         .setMaxResults(1)
         .getResultList();
-        System.out.println("godkjenning" + godkjentIkkegodkjent);
         if(tilbakemeldingListe.isEmpty()){
             return false;
         }
-         return true;
+        else {
+            String godkjent = tilbakemeldingListe.get(0).getGodkjenning();
+            System.out.println("godkjent: "+godkjent);
+            return (godkjent.equals("Godkjent"));
     }
-                
-    }
+}
+}
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
